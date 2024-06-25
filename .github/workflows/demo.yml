@@ -1,0 +1,12 @@
+name: Echo API Key
+
+on: [push]
+
+jobs:
+  echo_api_key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo the API Key
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: echo "API Key is $API_KEY"
